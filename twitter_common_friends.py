@@ -1,11 +1,15 @@
 #!/usr/bin/python
 # -*- coding: utf8 -*-
 
+'''
+Program which shows client's Twitter friends and then checks if two of them 
+selected by the user have any common friends and prints them.
+'''
 import time
 import tweepy
 
-auth = tweepy.OAuthHandler("4Xd4whnc7wpom9UUUXqAUufzW", "fOrWFjVMN6D0SrNt3B4cOTQt9C5wS1uZ0A0FAZN0txrOO6eCBi") #(key, secret)
-auth.set_access_token("2569091207-sPglEKz6Uxo4uHbQfTp7XX54rRMnIn9LFwF7jVN", "FYBeSt4qd0TuTG7hQVZ7zAh4L0m5wf4rVjb82wlC6g8FS") #(token, secret token)
+auth = tweepy.OAuthHandler("key", "key") #(key, secret)
+auth.set_access_token("token", "token") #(token, secret token)
 
 
 api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True, compression=True)
@@ -14,7 +18,7 @@ client = tweepy.API(auth)
 
 friends = client.friends()
 
-for friend in tweepy.Cursor(client.friends).items(200): #εμφανιση 200 max φιλων
+for friend in tweepy.Cursor(client.friends).items(200): #show max 200 friends
     print (friend.name)
 
 user1 = raw_input("Please enter 1st twitter user");
@@ -35,8 +39,8 @@ for x in range(0,len(ids1)):
     print ids1[x];
 for x in range(0,len(ids2)):
     print ids2[x];
-
 '''
+
 n = 0;
 for x in range(0,len(ids1)):
     #print "I came here1";
