@@ -8,7 +8,7 @@ and is one of a few such simple python programms neccessary to pass the class_
 
 > #### Description of project
 >
->>
+>>Program which shows client's Twitter friends and then checks if two of them selected by the user have any common friends and prints them.
 
 > #### About this project
 >
