@@ -1,6 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf8 -*-
 
+#Author Παναγιώτης Πράττης/Panagiotis Prattis
+
 '''
 Program which shows client's Twitter friends and then checks if two of them 
 selected by the user have any common friends and prints them.
